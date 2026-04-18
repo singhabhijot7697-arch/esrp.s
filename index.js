@@ -131,4 +131,6 @@ process.on("unhandledRejection", console.error);
 process.on("uncaughtException", console.error);
 
 // ✅ LOGIN
-client.login(process.env.TOKEN);
+client.login(process.env.TOKEN)
+  .then(() => console.log("✅ Login successful"))
+  .catch(err => console.error("❌ Login failed:", err));
