@@ -7,6 +7,7 @@ const { Client, GatewayIntentBits, Collection, Partials } = require("discord.js"
 const app = express();
 app.get("/", (req, res) => res.send("✅ Bot Alive"));
 app.listen(3000, () => console.log("🌐 Web running"));
+console.log("TOKEN:", process.env.TOKEN ? "FOUND ✅" : "MISSING ❌");
 
 // ✅ CLIENT (ALL INTENTS FOR FULL LOG SYSTEM)
 const client = new Client({
